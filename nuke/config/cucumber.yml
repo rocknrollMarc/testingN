@@ -1,0 +1,6 @@
+# Project cucumber config files
+default: SITE_URL=localhost SITE_FRONT_END_PORT=3000 SITE_ADMIN_PORT=3009 -r features
+rackspace: SITE_URL=sstore.ratchetbucket.co SITE_FRONT_END_PORT=3000 SITE_ADMIN_PORT=3009 -r features
+# You must specify where the URL is for this profile
+# example: www.10.211.55.8.xip.io
+vagrant: -r features

@@ -1,0 +1,21 @@
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+guard :bundler do
+  watch('Gemfile')
+  # Uncomment next line if your Gemfile contains the `gemspec' command.
+  # watch(/^.+\.gemspec/)
+end
+
+guard 'coffeescript', :input => 'app/assets/javascripts'
+
+guard 'ctags-bundler', :src_path => ["app", "lib", "spec/support"] do
+  watch(/^(app|lib|spec\/support)\/.*\.rb$/)
+  watch('Gemfile.lock')
+end
+
+guard 'cucumber' do
+  watch(%r{^features/.+\.feature$})
+  watch(%r{^features/support/.+$})          { 'features' }
+  watch(%r{^features/step_definitions/(.+)_steps\.rb$}) { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'features' }
+end

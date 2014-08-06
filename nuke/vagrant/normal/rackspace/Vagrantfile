@@ -1,0 +1,28 @@
+# NOTE: This works with the US Rackspace acocunt
+# You have to run this command first to get this to work:
+# 
+
+# MICHAEL: Synced folder do not work
+# delete the contents of the prov folder 
+#system('rm prov/*')
+# Copy the provisioning folder contents here
+system('cp -f ../prov/* .')
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "dummy"
+ 
+  config.ssh.private_key_path = "/Users/michael/.ssh/id_rsa"
+ 
+  config.vm.provider :rackspace do |rs|
+    rs.server_name     = "sstoredev"
+    rs.username        = "thelabs"
+    rs.api_key         = "efe9ee1ea5b2126c4e472b0e1b082142"
+    rs.rackspace_region         = "dfw"
+    rs.flavor          = /512MB/
+    rs.image           = /Ubuntu/
+    rs.public_key_path = "/Users/michael/.ssh/id_rsa.pub"
+  end
+  
+  # MICHAEL: This is the path for the provisioning file
+  #config.vm.provision "shell", path: "provision.sh"
+end

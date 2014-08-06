@@ -1,0 +1,24 @@
+#File with the SS Tickets
++++ SS-66
++++ ss-22 - Although not sure what the how-to is supposed to show
+--- ss-110 - Does not exist in registration anymore!
++++ ss-196 - Needs to be refined, right now is doing content check instead of the real options checked
++++ ss-192 - Same cleanup story to verify that it is a dropdown with options
++++ ss-253 - Also added one for the language default as well
++++ ss-251 - In the fields file
++++ ss-257 - in the basic registration file
+--- ss-272 - Not right spot. TO-DO: where does this go?
+ss-73 - Is this relevant????
+ss-243 - EMAIL TEST
+ss-157 - There is some confusion about what "remove means"
+ss-292 - The AGB checkbox is always "unselected"
++++ ss-322 - put in both good and bad cases
++++ ss-316 - This is the default case 
+ss-194 - TODO: How do we lock an account? Also Targets not considered part of path for the check, need to refactor
+--- ss-338 - cosmetic
+--- ss-154 - flow change that is reflected in the current tests
+ss-116 - TODO: What is this?
+ss-393 - TODO: Dependent on emails, this needs to be repeated in other blocks as well
+ss-90 - TODO: Needs to also have a test with the backend that a new campaign works. Is currently tested with just test campaign
+ss-13 - TODO: email verification step missing
+--- ss-103 - Not relevant (redesign coming)

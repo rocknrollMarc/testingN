@@ -1,0 +1,26 @@
+@password_recovery
+
+Feature: A User can recover his password
+
+  In order to regain access to my account
+  As a Registered user
+  I want to recover my password
+
+  Scenario: Recover password with email
+    Given I am a "Registered" user
+    And I am on the "Login" page
+    When Im on the "lostpassword" page 
+    And  I click "Ich hab mein password vergessen"
+    And I enter my email "<email>" 
+    And press "passwort zuruecksetzen"
+    Then I should see an "alert" telling me that my "password" be reset
+
+  Scenario: Lost email with Sicherheitsfrage 
+    Given I am a "registered" user
+    And I am on the "Login" page
+    When I "click" on the "Sicherheitsfrage" "dropdown menu"
+    And "choose" "<Sicherheitsfrage>"
+    And Enter a valid answer <Sicherheitsfrage antwort>
+    Then I should get an email with a "recovory link"
+
+

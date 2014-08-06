@@ -1,0 +1,9 @@
+#File with the SS Tickets
+ss-12 (use hermes db)
+ss-28
+ss-42
+ss-109 (import the data, check via mongo for PLZ length)
+ss-6
+ss-207
+ss-246
+ss-411

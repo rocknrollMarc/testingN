@@ -1,0 +1,27 @@
+source 'https://rubygems.org'
+gem 'cucumber'
+gem 'rspec'
+gem 'capybara'
+gem 'rails'
+gem 'poltergeist', :require => false
+gem 'selenium-webdriver', :require => false
+
+gem 'mailcatcher'
+gem 'httparty'
+
+# run guard init to install plugins 
+# run guard in seperate termianl window and enjoy
+# edit .guard file for personal config
+group :development do
+  gem 'guard'
+  gem 'guard-cucumber'
+  gem 'guard-ctags-bundler'
+  gem 'guard-bundler'
+  gem 'guard-coffeescript'
+  gem 'terminal-notifier-guard'
+  gem 'terminal-notifier'
+  gem 'rest-terminal'
+  gem 'capybara-firebug'
+  gem 'capybara-screenshot'
+
+end
