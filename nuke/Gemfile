@@ -14,12 +14,12 @@ gem 'httparty'
 # edit .guard file for personal config
 group :development do
   gem 'guard'
-  gem 'guard-cucumber'
-  gem 'guard-ctags-bundler'
+  gem 'guard-cucumber', :require  => false
   gem 'guard-bundler'
-  gem 'guard-coffeescript'
   gem 'terminal-notifier-guard'
   gem 'terminal-notifier'
+  gem 'nuker'
+  gem 'mongo_mapper'
   gem 'rest-terminal'
   gem 'capybara-firebug'
   gem 'capybara-screenshot'
