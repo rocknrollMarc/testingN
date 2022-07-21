@@ -215,7 +215,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.40)
+    tzinfo (0.3.61)
     websocket (1.0.7)
     websocket-driver (0.3.4)
     xpath (2.0.0)
